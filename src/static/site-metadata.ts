@@ -11,7 +11,7 @@ interface ISiteMetadataResult {
 
 const getBasePath = () => {
   const baseUrl = import.meta.env.BASE_URL;
-  return baseUrl === '/running_page/' ? '' : baseUrl;
+  return baseUrl === '/' ? '' : baseUrl;
 };
 
 const data: ISiteMetadataResult = {
