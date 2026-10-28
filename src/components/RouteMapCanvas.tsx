@@ -46,9 +46,9 @@ export function RouteMapCanvas({
   );
   const [retry, setRetry] = useState(0);
   const style =
-    provider === 'mapbox'
-      ? `mapbox://styles/mapbox/${dark === false ? 'light' : 'dark'}-v11`
-      : `https://basemaps.cartocdn.com/gl/${dark === false ? 'positron' : 'dark-matter'}-gl-style/style.json`;
+  provider === 'mapbox'
+    ? `mapbox://styles/mapbox/${dark === false ? 'light' : 'dark'}-v11`
+    : `https://basemaps.cartocdn.com/gl/${dark === false ? 'positron' : 'dark-matter'}-gl-style/style.json?key=cb1_4wlv_1_5a9aca55f1d4e2f158b45016`;
 
   const displayActivity = useMemo(
     () =>
