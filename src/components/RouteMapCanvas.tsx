@@ -204,17 +204,14 @@ export function RouteMapCanvas({
     if (!map) return;
     let failed = false;
     const onError = (event: mapboxgl.ErrorEvent) => {
-      const onError = (event: mapboxgl.ErrorEvent) => {
-  console.error('[RouteMap debug] Map error:', event.error);
-
-  const code = (event.error as Error & { status?: number }).status;
-  if (provider === 'mapbox' && (code === 401 || code === 403)) {
-    setProvider('carto');
-  } else {
-    failed = true;
-    setStatus('error');
-  }
-};
+      const code = (event.error as Error & { status?: number }).status;
+      if (provider === 'mapbox' && (code === 401 || code === 403)) {
+        setProvider('carto');
+      } else {
+        failed = true;
+        setStatus('error');
+      }
+    };
     const onIdle = () => {
       if (!failed) setStatus('ready');
     };
