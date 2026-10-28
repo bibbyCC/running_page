@@ -45,7 +45,7 @@ export function RouteMapCanvas({
     'loading'
   );
   const [retry, setRetry] = useState(0);
-  const style =
+const style =
   provider === 'mapbox'
     ? `mapbox://styles/mapbox/${dark === false ? 'light' : 'dark'}-v11`
     : `https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json?key=cb1_4wlv_1_5a9aca55f1d4e2f158b45016`;
